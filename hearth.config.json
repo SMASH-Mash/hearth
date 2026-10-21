@@ -1,0 +1,7 @@
+{
+  "assistant": { "name": "Alexa", "wakeWord": "alexa", "speakScreenResults": true },
+  "model": { "provider": "gemini", "modelId": "auto", "temperature": 0.4 },
+  "servers": [
+    { "name": "mend", "url": "http://127.0.0.1:8787/mcp", "headers": { "x-mend-household": "demo" } }
+  ]
+}

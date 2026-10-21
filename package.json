@@ -1,0 +1,29 @@
+{
+  "name": "hearth-mcp-host",
+  "version": "1.0.0",
+  "description": "Hearth: an open-source, voice-first MCP host that simulates an Alexa+ Echo Show. Talk to any Streamable HTTP MCP server, see its MCP Apps screens, and answer its elicitations by voice.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "node server/index.js",
+    "dev": "node scripts/build.mjs && node server/index.js",
+    "test": "node --test \"tests/*.test.mjs\"",
+    "postinstall": "node scripts/build.mjs",
+    "screenshots": "node scripts/screenshots.mjs"
+  },
+  "dependencies": {
+    "@google/genai": "^2.30.0",
+    "@modelcontextprotocol/client": "^2.3.1",
+    "@modelcontextprotocol/ext-apps": "^2.0.3",
+    "@strands-agents/sdk": "^1.21.0",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "playwright-core": "^1.48.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

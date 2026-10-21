@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hearth: voice-first MCP host</title>
+  <meta name="description" content="Hearth simulates an Alexa+ Echo Show for MCP servers: voice in and out, MCP Apps screens, and elicitation by voice.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="room" aria-hidden="true"><i class="glow"></i></div>
+
+  <header class="top">
+    <div class="brand"><span class="mark"></span>Hearth <small>voice-first MCP host · Alexa+ simulator</small></div>
+    <button class="ghost" id="inspectorToggle" aria-pressed="true">Inspector</button>
+  </header>
+
+  <main class="stage">
+    <section class="device-wrap">
+      <div class="device" id="device" data-state="idle">
+        <div class="bezel">
+          <i class="camera"></i>
+          <div class="screen" id="screen">
+            <!-- Home -->
+            <div class="layer home" id="home">
+              <div class="wallpaper"></div>
+              <div class="clock" id="clock">9:41</div>
+              <div class="date" id="date"></div>
+              <div class="try"><span class="try-k">Try saying</span><span class="try-q" id="tryQ">"Alexa, my dishwasher won't drain"</span></div>
+            </div>
+            <!-- Conversation -->
+            <div class="layer talk" id="talk">
+              <p class="heard" id="heard"></p>
+              <p class="reply" id="reply"></p>
+            </div>
+            <!-- MCP App screen -->
+            <div class="layer app" id="app"></div>
+            <!-- Captions over apps -->
+            <div class="captions" id="captions"></div>
+            <!-- Elicitation -->
+            <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetMsg">
+              <div class="sheet-card">
+                <div class="sheet-ico"></div>
+                <div class="sheet-from" id="sheetFrom"></div>
+                <p class="sheet-msg" id="sheetMsg"></p>
+                <form id="sheetForm"></form>
+                <div class="sheet-hint">Say <b>"yes"</b> or <b>"no"</b>, or tap</div>
+              </div>
+            </div>
+            <!-- Setup notice -->
+            <div class="layer setup" id="setup" hidden></div>
+            <!-- Light bar -->
+            <div class="lightbar" aria-hidden="true"><i></i></div>
+          </div>
+        </div>
+        <div class="base" aria-hidden="true"></div>
+      </div>
+
+      <div class="controls">
+        <button class="mic" id="mic" aria-label="Talk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg><span class="ring"></span></button>
+        <form class="type" id="typeForm" autocomplete="off">
+          <input id="typeInput" placeholder="Type what you'd say… (or hold Space to talk)" aria-label="Say something">
+          <button type="submit" aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </form>
+        <label class="toggle"><input type="checkbox" id="handsFree"><span>Hands-free</span></label>
+        <label class="toggle"><input type="checkbox" id="voiceOut" checked><span>Voice</span></label>
+      </div>
+    </section>
+
+    <aside class="inspector" id="inspector">
+      <div class="ins-head">
+        <h2>Inspector</h2>
+        <button class="ghost tiny" id="clearLog">Clear</button>
+      </div>
+      <div class="ins-servers" id="servers"><p class="muted">Connecting…</p></div>
+      <ol class="ins-log" id="log"></ol>
+    </aside>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
