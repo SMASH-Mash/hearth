@@ -152,13 +152,13 @@ body[data-state="listening"] .mic .ring { animation: ping 1.4s var(--ease) infin
 .ins-log li .k { font-weight: 700; margin-right: 6px; }
 .ins-log li .t { float: right; color: var(--ink-3); font-variant-numeric: tabular-nums; }
 .ins-log li pre { margin: 6px 0 0; white-space: pre-wrap; word-break: break-word; font-size: 11.5px; color: var(--ink-2); max-height: 160px; overflow: auto; }
-.ins-log li.heard { border-left-color: #c7d2fe; }
-.ins-log li.tool { border-left-color: var(--amber); }
-.ins-log li.toolDone { border-left-color: var(--green); }
-.ins-log li.elicit, .ins-log li.elicitDone { border-left-color: var(--red); }
-.ins-log li.screen { border-left-color: var(--cyan); }
-.ins-log li.say { border-left-color: var(--blue); }
-.ins-log li.error { border-left-color: var(--red); background: rgba(255, 107, 107, .08); }
+.ins-log li[data-kind="heard"] { border-left-color: #c7d2fe; }
+.ins-log li[data-kind="tool"] { border-left-color: var(--amber); }
+.ins-log li[data-kind="toolDone"] { border-left-color: var(--green); }
+.ins-log li[data-kind="elicit"], .ins-log li[data-kind="elicitDone"] { border-left-color: var(--red); }
+.ins-log li[data-kind="screen"] { border-left-color: var(--cyan); }
+.ins-log li[data-kind="say"] { border-left-color: var(--blue); }
+.ins-log li[data-kind="error"] { border-left-color: var(--red); background: rgba(255, 107, 107, .08); }
 @keyframes logIn { from { opacity: 0; transform: translateX(8px); } }
 .muted { color: var(--ink-3); margin: 0; }
 

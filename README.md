@@ -26,7 +26,7 @@ It's free, open source (MIT) and needs no hardware. The agent runs on AWS's open
 - **Inspector.** A live timeline of what was heard and said, tool calls (from the assistant, a screen tap or a developer), results, elicitations and screens, with payloads.
 - **No-model developer mode.** `/tool <name> {json}` calls a tool directly and renders its screen, so you can work on an MCP App without any AI model or key.
 - **Pluggable models.**
-  - Gemini (free key; Hearth picks the newest stable Flash model)
+  - Gemini (free key). Hearth probes the newest stable Flash models at startup and routes between them with Strands' `ModelRouter`, so a busy free-tier model fails over automatically.
   - any OpenAI-compatible endpoint (Groq, OpenRouter, Ollama, LM Studio)
   - Amazon Bedrock
 

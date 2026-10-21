@@ -1,0 +1,22 @@
+0:00  [card] The problem You can't scroll a phone with wet hands inside a dishwasher. 62 mill
+0:06  [card] Alexa+ track · MCP 2025-11-25 Mend Hands-free repair for Alexa+: one step at a t
+0:14  Hearth simulates Alexa+ on an Echo Show. The inspector on the right shows every MCP message.
+0:17  [you] Alexa, my dishwasher won't drain. There's water sitting at the bottom.
+0:22  Mend checks the appliance passport and finds the iFixit guide for your exact Bosch model.
+0:27  [you] Yes, let's do the easy one.
+0:30  Difficulty, time, tools, and the risks Mend will check before each step.
+0:35  [you] Okay, next.
+0:38  Before risky steps, Mend asks the person directly (MCP elicitation). The AI can't confirm for you.
+0:43  [you] Yes, it's unplugged.
+0:46  Each step is spoken, with the real photo from the guide. Truly hands-free.
+0:51  Or just tap: the voice assistant stays in sync with the screen.
+0:57  [you] Next.
+1:02  [you] It's draining now. It's fixed!
+1:06  Logged in the passport. The filter's maintenance clock resets.
+1:10  [you] What maintenance is due?
+1:18  [you] Add a new drain pump for my dishwasher to my cart.
+1:22  Purchases need your approval too, every single time.
+1:25  [you] Yes, add it.
+1:28  Cart (simulated in this prototype) with the exact part search.
+1:31  Under the hood: MCP 2025-11-25 over Streamable HTTP · MCP Apps · elicitation · Agent Skill · Strands Agents SDK.
+1:36  [card] Mend + Hearth github.com/SMASH-Mash/mend · github.com/SMASH-Mash/hearth Open sou

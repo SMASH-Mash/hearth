@@ -307,7 +307,7 @@ const LABELS = { heard: 'Heard', tool: 'Tool call', toolDone: 'Tool done', say: 
 function addLog(kind, data) {
   const ol = $('#log');
   const li = document.createElement('li');
-  li.className = kind;
+  li.dataset.kind = kind; // not a class: names like "heard" and "screen" are device layers
   const time = new Date(data.at || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
   let summary = '';
   if (kind === 'heard' || kind === 'say') summary = data.text;
